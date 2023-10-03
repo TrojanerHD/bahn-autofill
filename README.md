@@ -16,7 +16,7 @@ Head over to https://github.com/TrojanerHD/bahn-autofill/releases and click on t
 
 ## Gallery
 
-![A video of the extension in action](resources/Peek%202023-10-03%2023-21.webm)
+[A video of the extension in action](https://github.com/TrojanerHD/bahn-autofill/assets/32276754/33d95f79-409a-4989-ba9d-97fa2314d22f)
 
 ## Development
 
