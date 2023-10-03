@@ -1,8 +1,11 @@
 {
   "manifest_version": 2,
   "name": "DB Autofill",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Autofills your information when navigating to the Deutsche Bahn website",
+  "icons": {
+    "48": "resources/icons/logo-48.png"
+  },
   "content_scripts": [
     {
       "matches": ["*://*.bahn.de/"],
