@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "DB Autofill",
+  "version": "0.0.1",
+  "description": "Autofills your information when navigating to the Deutsche Bahn website",
+  "content_scripts": [
+    {
+      "matches": ["*://*.bahn.de/"],
+      "js": ["build/bahn-autofill.js"]
+    }
+  ],
+  "permissions": ["storage"]
+}
