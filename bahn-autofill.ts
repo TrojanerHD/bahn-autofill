@@ -1,7 +1,9 @@
 // Warning: this is incomplete and only contains the values that need to be changed
 interface VuexStore {
   reiseloesungSucheState: {
-    verkehrsmittel: string[];
+    hinfahrt: {
+      verkehrsmittel: string[];
+    };
     reisende: any[];
     schnelleVerbindungen: boolean;
   };
@@ -11,7 +13,9 @@ function copyToLocalStorage(): void {
   const storage: VuexStore = JSON.parse(sessionStorage.getItem('vuex'));
   const newStore: VuexStore = {
     reiseloesungSucheState: {
-      verkehrsmittel: storage.reiseloesungSucheState.verkehrsmittel,
+      hinfahrt: {
+        verkehrsmittel: storage.reiseloesungSucheState.hinfahrt.verkehrsmittel,
+      },
       reisende: storage.reiseloesungSucheState.reisende,
       schnelleVerbindungen: storage.reiseloesungSucheState.schnelleVerbindungen,
     },
@@ -33,7 +37,11 @@ function copyToSessionStorage(): void {
     ...sessionJson,
     reiseloesungSucheState: {
       ...sessionJson.reiseloesungSucheState,
-      verkehrsmittel: localJson.reiseloesungSucheState.verkehrsmittel,
+      hinfahrt: {
+        ...sessionJson.reiseloesungSucheState.hinfahrt,
+        verkehrsmittel:
+          localJson.reiseloesungSucheState.hinfahrt.verkehrsmittel,
+      },
       reisende: localJson.reiseloesungSucheState.reisende,
       schnelleVerbindungen:
         localJson.reiseloesungSucheState.schnelleVerbindungen,
