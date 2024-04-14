@@ -40,3 +40,4 @@ However, feel free to open [issues](https://github.com/TrojanerHD/bahn-autofill/
 ### Makefile
 + make all: Builds addon into file `bahn-autofill.zip`
 + make clean: Deletes build folder and `bahn-autofill.zip`
++ make source: Zips the source of this add-on into `bahn-autofill-source.zip`

@@ -9,3 +9,11 @@ endif
 clean:
 	rm -r build
 	rm bahn-autofill.zip
+	rm bahn-autofill-source.zip
+
+source:
+	tsc
+ifneq ("$(wildcard ./bahn-autofill-source.zip)", "")
+	rm bahn-autofill-source.zip
+endif
+	zip bahn-autofill-source.zip resources/**/** README.md .prettierrc bahn-autofill.ts LICENSE Makefile manifest.json tsconfig.json
